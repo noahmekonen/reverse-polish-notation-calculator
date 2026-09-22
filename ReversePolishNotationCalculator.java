@@ -12,7 +12,6 @@ public class ReversePolishNotationCalculator {
     // prints that remaining input (and also prints out the current contents of the
     // stack)
     // and then re-loads the remaining input into a new Scanner
-    // This means that we can keep Scanning the remainder of the input
     private static Scanner printRemainingExpression(Stack<Double> numbers, Scanner scExpression) {
 
         String remainderOfExpr = scExpression.nextLine();
@@ -72,10 +71,6 @@ public class ReversePolishNotationCalculator {
                      continue ShouldWeTryAgain; // This line will jump back to the outer loop
                   }
                 
-                // // "4 3 -" should be +1, not -1
-                // // When parsing the expression 4 is pushed first, then 3
-                // // the second operand (the 3) is at the top (so we'll pop that into operand2)
-                // // then pop the first operand (the 4) into operand1
                  if (numbers.isEmpty()) {
                      System.err.println(
                              "ERROR! Expected to find 2 operands (numbers) but we don't have any numbers on the stack!");
@@ -120,8 +115,6 @@ public class ReversePolishNotationCalculator {
 
             }
            }
-
-            // At this point we've finished reading through the expression
 
             // If there's more than 1 operand (number) left then we print this error
             // message:
