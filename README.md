@@ -48,5 +48,5 @@ The calculator reads the expression one token at a time.
 - Switch statements
 - Methods
 - Input validation
-- Error handling
+- Error/invalid-expression handling
 - Labeled loops
